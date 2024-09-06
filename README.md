@@ -6,7 +6,7 @@ On the host:
 
 ```
 docker run -it --rm \
-  --mount type=bind,src=PATH_TO_SITE,dst=/tmp/website-builder/site \
+  --mount type=bind,src=PATH_TO_SITE,dst=/tmp/site \
   -p 8000:8000 \
   website-builder
 ```
@@ -14,9 +14,9 @@ docker run -it --rm \
 In the container shell:
 
 ```
-python builder.py \
-  --src=./site/src \
-  --tgt=./site/site \
-  --manifest=./site/manifest.yaml \
-  --sitemap=./site/sitemap.yaml
+python /usr/local/website-builder/builder.py \
+  --src=/tmp/site/src \
+  --tgt=/tmp/site/site \
+  --manifest=/tmp/site/manifest.yaml \
+  --sitemap=/tmp/site/sitemap.yaml
 ```

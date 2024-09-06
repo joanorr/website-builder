@@ -1,6 +1,6 @@
 FROM python:3.12
 
-WORKDIR /tmp/website-builder
+WORKDIR /usr/local/website-builder
 
 COPY . .
 
