@@ -3,7 +3,7 @@
 # Usage
 
 ```
-docker run --rm \
+docker run -it --rm \
   --mount type=bind,src=PATH_TO_SITE,dst=/website \
   -p 8080:8080 \
   website-builder \
